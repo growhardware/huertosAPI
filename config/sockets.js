@@ -46,8 +46,8 @@ module.exports.sockets = {
   //
   //   // `true` allows the socket to connect.
   //   // (`false` would reject the connection)
-    console.log('runing "beforeConnect" function');
     return proceed(undefined, true);
+    console.log('va a conectar')
   },
 
 
@@ -65,6 +65,7 @@ module.exports.sockets = {
   //   // By default: do nothing.
   //   // (but always trigger the callback)
     return done();
+    console.log('desconectó un socket')
   //
   },
 
