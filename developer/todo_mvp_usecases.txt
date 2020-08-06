@@ -1,0 +1,52 @@
+***OBJETIVO 1: "IOT IDA Y VUELTA"***
+
+Casos de uso:
+
+1. Alguien crea un "user" desde el frontend web (HECHO)
+2. Un "user" hace login desde el frontend web (HECHO)
+3. Un "user" logueado desde el frontend web crea un "device" (IMPLEMENTAR)
+4. Un "user" hace login desde un orchardBrain (HECHO)
+5. Un orchardBrain logueado se suscribe al salón de un "device" del "user" (IMPLEMENTAR)
+6. Un "user" logueado en un orchardBrain actualiza el estado de un "device" (IMPLEMENTAR)
+7. Un "user" logueado en el frontend visualiza el esatado de un "device" (IMPLEMENTAR)
+8. Un "user" logueado en el frontend altera el estado de un "device" (IMPLEMENTAR)
+
+Detalles:
+
+1. Viene implementado en Sails.js.
+2. Idem.
+3. En la página de bienvenida (views/pages/dashboard/welcome.ejs) aparece un boton para crear un "device".
+   Al crear un device este se hace vsible en la misma página como un contenedor
+4. Ya implementado en orchardBrain con Socket.io y Sails.socket
+5. Al establecer la comunicacion con el "device", el orchardBrain solicita al huertosAPI que lo suscriba a su salón (implementar)
+6. El "device" es una arduino que cambia de estado al abrirse o cerrarse un circuito (hecho)
+   El arduino comunica el cambio al orchardBrain mediante un json stream en un puerto serial (hecho)
+   El orchardBrain recibe el mensaje del arduino y lo manda al backend (encaminado)
+7. En la página de bienvenida (views/pages/dashboard/welcome.ejs) de un usuario que ha creado un "device",
+   aparece un objeto representando al "device" que lleva asociado un indicador binario,
+   conteniendo el valor de la propiedad "status.led" del "device".
+8. En la página de bienvenida (views/pages/dashboard/welcome.ejs) de un usuario que ha creado un "device",
+   aparece un objeto representando al "device" que lleva asociado un switch o casilla de verificación.
+   Al cliquear en el switch se envía un mensaje a los suscriptos al salón del "device"...
+   El orchardBrain recibe el mensaje y pide al "device" cambiar el estado mediante un json stream en el serialport
+   El "device" cambia el estado y comunica el cambio al orchardBrain
+   El orchardBrain recibe el mensaje del "device" y manda un mensaje al huertosAPI pidiendo actualizar el estado
+
+***OBJETIVO 2: "CASO REAL"***
+
+Nuevos casos de uso:
+
+1. Un "user" logueado desde el frontend web crea un "orchard"
+2. Un "user" logueado desde el frontend web visualiza un "orchard" que ha creado
+3. Un "user" logueado desde el frontend web crea un "batch" dentro de un "orchard"
+4. Un "user" logueado desde el frontend web visualiza un "batch" dentro de un "orchard" en el dashboard
+5. Un "user" logueado desde el frontend web crea una "plant"
+6. Un "user" logueado desde el frontend web visualiza una "plant" en el dashboard
+7. Un "user" logueado desde el frontend web suscribe una "plant" a un "batch"
+8. Un "user" logueado desde el frontend web visualiza dentro de un "batch" las "plant" que le ha suscripto
+9. Un "user" logueado desde el frontend web crea un "device" del tipo "ec-sensor"
+10. Un "user" visualiza el histórico de un "device" tipo "ec-sensor" en el dashboard 
+
+
+***OBJETIVO 3: "MINIMAL V PRODUCT"***
+
