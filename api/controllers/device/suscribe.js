@@ -1,14 +1,14 @@
 module.exports = {
 
 
-  friendlyName: 'Connect',
+  friendlyName: 'Suscribe',
 
 
-  description: 'Connect device.',
+  description: 'Suscribe device.',
 
 
   inputs: {
-    
+
   },
 
 
@@ -18,7 +18,7 @@ module.exports = {
 
 
   fn: async function (inputs) {
-    console.log("algo pegó acá")
+
     // All done.
     return;
 

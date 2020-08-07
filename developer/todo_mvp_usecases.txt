@@ -45,7 +45,8 @@ Nuevos casos de uso:
 7. Un "user" logueado desde el frontend web suscribe una "plant" a un "batch"
 8. Un "user" logueado desde el frontend web visualiza dentro de un "batch" las "plant" que le ha suscripto
 9. Un "user" logueado desde el frontend web crea un "device" del tipo "ec-sensor"
-10. Un "user" visualiza el histórico de un "device" tipo "ec-sensor" en el dashboard 
+10. Un "user" logueado desde el frontend web suscribe un "ec-sensor" a un "batch"
+11. Un "user" visualiza el histórico de un "device" tipo "ec-sensor" en el dashboard 
 
 
 ***OBJETIVO 3: "MINIMAL V PRODUCT"***

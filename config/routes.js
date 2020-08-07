@@ -34,7 +34,8 @@ module.exports.routes = {
   'GET /account/profile':    { action: 'account/view-edit-profile' },
 
   // Las de GH:
-
+  'POST /device/suscribe': {action: 'device/suscribe'},
+  'POST /device/record':  {action: 'device/record'},
 
   //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
@@ -64,5 +65,5 @@ module.exports.routes = {
   'POST  /api/v1/entrance/update-password-and-login':    { action: 'entrance/update-password-and-login' },
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   // de GH:
-  'PUT /api/v1/device/connect': { action: 'device/connect' },
+  'GET /csrfToken': { action: 'security/grant-csrf-token' },
 };
