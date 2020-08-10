@@ -12,13 +12,9 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    pushButton:{
-      type: 'boolean',
-      description: 'a digital input for testing',
-    },
-    led:{
-      type: 'boolean',
-      description: 'a digital output for testing'
+    status: {
+      type: 'json',
+      description: 'a json object with status of all the device parameters'
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
@@ -36,6 +32,4 @@ module.exports = {
     plants: {collection: 'plant', via: 'devices'},
 
   },
-
-};
-
+}
