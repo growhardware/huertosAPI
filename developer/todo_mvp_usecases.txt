@@ -2,8 +2,8 @@
 
 Casos de uso:
 
-1. Alguien crea un "user" desde el frontend web (HECHO)
-2. Un "user" hace login desde el frontend web (HECHO)
+1. Alguien crea un "user" desde el frontend web ()
+2. Un "user" hace login desde el frontend web ()
 3. Un "user" logueado desde el frontend web crea un "device" (IMPLEMENTAR)
 4. Un "user" hace login desde un orchardBrain (HECHO)
 5. Un orchardBrain logueado se suscribe al salón de un "device" del "user" (IMPLEMENTAR)
@@ -32,7 +32,7 @@ Detalles:
    El "device" cambia el estado y comunica el cambio al orchardBrain
    El orchardBrain recibe el mensaje del "device" y manda un mensaje al huertosAPI pidiendo actualizar el estado
 
-***OBJETIVO 2: "CASO REAL"***
+***OBJETIVO 2: "CASO VEDETTE"***
 
 Nuevos casos de uso:
 
@@ -51,3 +51,16 @@ Nuevos casos de uso:
 
 ***OBJETIVO 3: "MINIMAL V PRODUCT"***
 
+Nuevos casos de uso:
+
+A: CÁMARA:
+   1. Un "user" que es "admin" de un "device" tipo "camera", lo cual se aprecia en video inserto en el dashboard.
+   2. Un "user" que es "admin" de un "device" invita a otro "user" a insperccionar dicho "device"
+   3. Un "user" recibe invitacion de otro "user" quien es "admin" de un "device" y se suscribe como "inspector".
+   4. Un "user" que es "inspector" de un "device" tipo "camera" visualiza el streaming en su dashboard 
+
+B: AGUA:
+
+C: LUZ:
+
+D: AIRE:

@@ -66,4 +66,5 @@ module.exports.routes = {
   'POST  /api/v1/deliver-contact-form-message':          { action: 'deliver-contact-form-message' },
   // de GH:
   'GET /csrfToken': { action: 'security/grant-csrf-token' },
+  'POST /record': {action: 'device/record'},
 };

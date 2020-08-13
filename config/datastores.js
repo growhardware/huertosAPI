@@ -49,7 +49,6 @@ module.exports.datastores = {
     url: "mongodb://api:api@localhost:27017/test",
     // "mongodb+srv://huertosAPI:VxXiPjH3Qrgxxms@cluster0-shard-00-02-dx2ao.gcp.mongodb.net:27017/huertos",
     //"mongodb://test
-
     //   //"mongodb+srv://huertosAPI:VxXiPjH3Qrgxxms@cluster0-shard-00-02-dx2ao.gcp.mongodb.net/test?retryWrites=true&w=majority",
     //   //"mongodb+srv://ghapi:zRINaNIvW8tqELtY@cluster0-s7lnh.mongodb.net:27017/test?retryWrites=true&w=majority",
     //   "mongodb://ghapi:zRINaNIvW8tqELtY@cluster0-shard-00-00-s7lnh.mongodb.net:27017,cluster0-shard-00-01-s7lnh.mongodb.net:27017,cluster0-shard-00-02-s7lnh.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
