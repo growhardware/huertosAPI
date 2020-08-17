@@ -12,6 +12,10 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
+
+    // The kind of devices will be defined by GH. By now: ['ioTest','ecSensor','waterMedulla']
+    kind: {type: 'string', description: 'GH identifier name for a certain kind of device', required: true},
+
     status: {
       type: 'json',
       description: 'a json object with status of all the device parameters'
@@ -26,10 +30,8 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    orchard: {model: 'orchard'},
-    environments: {collection: 'environment', via: 'devices'},
-    batches: {collection: 'batch', via: 'devices'},
-    plants: {collection: 'plant', via: 'devices'},
-
+    farm: {model: 'farm'},
+    environment: {moldel: 'environment'},
+    batch: {model: 'batch'},
   },
-}
+};

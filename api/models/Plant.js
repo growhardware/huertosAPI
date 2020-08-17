@@ -28,10 +28,9 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    orchard: {model: 'orchard'},
+    farm: {model: 'farm'},
     environment: {model: 'environment'},
     batches: {collection: 'batch', via: 'plants'},
-    devices: {collection: 'device', via: 'plants'},
     strain: {model: 'strain'},
     mother: {model: 'plant'},
     father: {model: 'plant'},

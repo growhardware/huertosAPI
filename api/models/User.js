@@ -164,8 +164,8 @@ without necessarily having a billing card.`
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    farming: {collection: 'orchard', via: 'farmers'},
-    inspecting: {collection: 'orchard', via: 'inspectors'},
+    farming: {collection: 'farm', via: 'farmers'},
+    inspecting: {collection: 'farm', via: 'inspectors'},
 
   },
 };

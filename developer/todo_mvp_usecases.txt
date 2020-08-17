@@ -54,13 +54,22 @@ Nuevos casos de uso:
 Nuevos casos de uso:
 
 A: CÁMARA:
-   1. Un "user" que es "admin" de un "device" tipo "camera", lo cual se aprecia en video inserto en el dashboard.
+   1. Un "user" crea un "device" tipo "camera", lo cual se aprecia en video inserto en el dashboard.
    2. Un "user" que es "admin" de un "device" invita a otro "user" a insperccionar dicho "device"
    3. Un "user" recibe invitacion de otro "user" quien es "admin" de un "device" y se suscribe como "inspector".
    4. Un "user" que es "inspector" de un "device" tipo "camera" visualiza el streaming en su dashboard 
 
 B: AGUA:
+   1. Crear un device tipo water_medulla (user: admin of device)
+   2. Visualizar un device tipo water_medulla en el dashboard (user: admin and inspector of device)
+   3. Setear un water_medulla (user: admin of device)
 
 C: LUZ:
+   1. Crear un device tipo light_medulla (user: admin of device)
+   2. Visualizar un device tipo light_medulla en el dashboard (user: admin and inspector of device)
+   3. Setear un light_medulla (user: admin of device)
 
 D: AIRE:
+   1. Crear un device tipo air_medulla (user: admin of device)
+   2. Visualizar un device tipo air_medulla en el dashboard (user: admin and inspector of device)
+   3. Setear un air_medulla (user: admin of device)
