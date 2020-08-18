@@ -32,7 +32,7 @@ module.exports = {
     farm: {model: 'farm'},
     environment: {model: 'environment'},
     plants: {collection: 'plant', via: 'batches'},
-    devices: {collection: 'device', via: 'batches'},
+    devices: {collection: 'device', via: 'batch'},
 
   },
 };
