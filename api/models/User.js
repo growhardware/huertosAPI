@@ -166,6 +166,7 @@ without necessarily having a billing card.`
 
     farming: {collection: 'farm', via: 'farmers'},
     inspecting: {collection: 'farm', via: 'inspectors'},
+    managing:{collection: 'device', via: 'admin'}
 
   },
 };
