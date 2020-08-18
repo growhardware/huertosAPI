@@ -79,5 +79,5 @@ module.exports.sockets = {
 
   // grant3rdPartyCookie: true,
 
-
+  onlyAllowOrigins: ['http://localhost:1337', 'http://localhost:3000'],
 };
