@@ -67,4 +67,7 @@ module.exports.routes = {
   // de GH:
   'GET /csrfToken': { action: 'security/grant-csrf-token' },
   'POST /record': {action: 'device/record'},
+
+  'GET /device/get-my-devices': { action: 'device/getMyDevices' },
+
 };
