@@ -68,6 +68,6 @@ module.exports.routes = {
   'GET /csrfToken': { action: 'security/grant-csrf-token' },
   'POST /record': {action: 'device/record'},
 
-  'GET /device/get-my-devices': { action: 'device/getMyDevices' },
+  'GET /device/get-my-devices': { action: 'device/get-my-devices' },
 
 };
