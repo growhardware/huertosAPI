@@ -22,4 +22,9 @@ module.exports.policies = {
   'legal/view-privacy': true,
   'deliver-contact-form-message': true,
 
+  // Policies de GH:
+  'device/create': 'attach-creator',
+  'device/update': 'is-admin-of-this',
+  //
+
 };
