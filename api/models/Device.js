@@ -32,7 +32,7 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    admin: {model: 'user', required: true},
+    admin: {collection: 'user', via: 'managing'},
     farm: {model: 'farm'},
     environment: {collection: 'environment', via: 'devices'},
     batch: {collection: 'batch', via: 'devices'},
