@@ -23,6 +23,11 @@ module.exports = {
       description: 'a json object with status of all the device parameters'
     },
 
+    settings: {
+      type: 'json',
+      description: 'a json object with device settings'
+    },
+
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
