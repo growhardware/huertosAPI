@@ -27,7 +27,7 @@ module.exports = {
     inspectors: {collection: 'user', via: 'inspecting'},
     environments: {collection: 'environment', via: 'farm'},
     batches: {collection: 'batch', via: 'farm'},
-    plants: {collection: 'plant', via: 'farm'},
+    specimens: {collection: 'specimen', via: 'farm'},
     devices: {collection: 'device', via: 'farm'},
 
   },
