@@ -39,7 +39,7 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   sockets: Object.assign({}, PRODUCTION_CONFIG.sockets, {
     onlyAllowOrigins: [
       //"http://localhost:1337",
-      "http://boiling-meadow-25657.herokuapp.com",
+      "https://boiling-meadow-25657.herokuapp.com",
       // 'https://example-staging.herokuapp.com',
       // 'http://example-staging.herokuapp.com',
       // 'https://staging.example.com',
