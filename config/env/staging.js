@@ -36,6 +36,18 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
     }),
   }),
 
+  ssl: {
+    ca: require("fs").readFileSync(
+      require("path").resolve(__dirname, "../ssl/request.csr")
+    ),
+    key: require("fs").readFileSync(
+      require("path").resolve(__dirname, "../ssl/private.key")
+    ),
+    cert: require("fs").readFileSync(
+      require("path").resolve(__dirname, "../ssl/certificate.crt")
+    ),
+  },
+
   sockets: Object.assign({}, PRODUCTION_CONFIG.sockets, {
     onlyAllowOrigins: [
       //"http://localhost:1337",
@@ -61,7 +73,8 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   }),
 
   session: Object.assign({}, PRODUCTION_CONFIG.session, {
-    url: 'redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions',
+    url:
+      "redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions",
     //--------------------------------------------------------------------------
     // /\  Hard-code your staging Redis server's `url` again here.
     // ||  (or use system env var: `sails_session__url`)
