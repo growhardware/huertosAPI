@@ -31,7 +31,7 @@ module.exports = {
 
     farm: {model: 'farm'},
     environment: {model: 'environment'},
-    plants: {collection: 'plant', via: 'batches'},
+    specimens: {collection: 'specimen', via: 'batches'},
     devices: {collection: 'device', via: 'batch'},
 
   },

@@ -30,10 +30,10 @@ module.exports = {
 
     farm: {model: 'farm'},
     environment: {model: 'environment'},
-    batches: {collection: 'batch', via: 'plants'},
+    batches: {collection: 'batch', via: 'specimens'},
     strain: {model: 'strain'},
-    mother: {model: 'plant'},
-    father: {model: 'plant'},
+    mother: {model: 'specimen'},
+    father: {model: 'specimen'},
 
   },
 

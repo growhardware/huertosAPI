@@ -27,7 +27,7 @@ module.exports = {
 
     farm: {model: 'farm'},
     batches: {collection: 'batch', via: 'environment'},
-    plants: {collection: 'plant', via: 'environment'},
+    specimens: {collection: 'specimen', via: 'environment'},
     devices: {collection: 'device', via: 'environment'},
 
   },

@@ -34,7 +34,7 @@ module.exports = {
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    plants: {collection: 'plant', via: 'strain'},
+    specimens: {collection: 'specimen', via: 'strain'},
 
   },
 };

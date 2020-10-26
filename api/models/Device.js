@@ -18,6 +18,11 @@ module.exports = {
       type: 'string',
       description: 'GH identifier name for a certain kind of device'},
 
+    alias: {
+      type: 'string',
+      description: 'Frendly name by the user'
+    },
+
     status: {
       type: 'json',
       description: 'a json object with status of all the device parameters'
@@ -36,7 +41,7 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-
+           
     admin: {collection: 'user', via: 'managing'},
     farm: {model: 'farm'},
     environment: {collection: 'environment', via: 'devices'},
