@@ -29,9 +29,16 @@ module.exports.security = {
 
   cors: {
     allRoutes: true,
-    allowOrigins: "http://localhost:3000",
+    //allowOrigins: "http://localhost:3000",
+    allowOrigins: "https://rocky-peak-50757.herokuapp.com/",
     allowCredentials: true,
   },
+
+  ssl: {
+    ca: require('fs').readFileSync(require('path').resolve(__dirname,'../ssl/request.csr')),
+    key: require('fs').readFileSync(require('path').resolve(__dirname,'../ssl/private.key')),
+    cert: require('fs').readFileSync(require('path').resolve(__dirname,'../ssl/certificate.crt'))
+  }
 
   /****************************************************************************
   *                                                                           *
