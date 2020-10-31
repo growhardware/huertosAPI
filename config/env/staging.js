@@ -51,7 +51,9 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   sockets: Object.assign({}, PRODUCTION_CONFIG.sockets, {
     onlyAllowOrigins: [
       //"http://localhost:1337",
-      "https://boiling-meadow-25657.herokuapp.com",
+	"http//localhost:3000",
+//      "https://boiling-meadow-25657.herokuapp.com",
+      	"https://rocky-peak-50757.herokuapp.com",
       // 'https://example-staging.herokuapp.com',
       // 'http://example-staging.herokuapp.com',
       // 'https://staging.example.com',
@@ -73,8 +75,8 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   }),
 
   session: Object.assign({}, PRODUCTION_CONFIG.session, {
-    url:
-      "redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions",
+    //url:
+     // "redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions",
     //--------------------------------------------------------------------------
     // /\  Hard-code your staging Redis server's `url` again here.
     // ||  (or use system env var: `sails_session__url`)
@@ -82,8 +84,8 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   }),
 
   custom: Object.assign({}, PRODUCTION_CONFIG.custom, {
-    //baseUrl: "https://3.137.147.183:443",
-    baseUrl: "https://3.137.147.183:80",
+    baseUrl: "https://3.137.147.183:443",
+    //baseUrl: "https://3.137.147.183:80",
     //--------------------------------------------------------------------------
     // /\  Hard-code the base URL where your staging environment is hosted.
     // ||  (or use system env var: `sails_custom__baseUrl`)
