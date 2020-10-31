@@ -4,6 +4,8 @@
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
+const kinds = require('./deviceKinds.json');
+const kindTags = _.pluck(kinds, 'tag');
 
 module.exports = {
 
@@ -16,7 +18,9 @@ module.exports = {
     // The kind of devices will be defined by GH. By now: ['ioTest','ecSensor','waterMedulla']
     kind: {
       type: 'string',
-      description: 'GH identifier name for a certain kind of device'},
+      description: 'GH identifier name for a certain kind of device',
+      isIn: kindTags,
+    },
 
     alias: {
       type: 'string',
@@ -41,7 +45,7 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-           
+
     admin: {collection: 'user', via: 'managing'},
     farm: {model: 'farm'},
     environment: {collection: 'environment', via: 'devices'},

@@ -1,0 +1,23 @@
+[
+    {
+        "tag": "ioTest",
+        "status" : {
+            "pushButton" : null,
+            "led": null
+        },
+        "settings": {
+            "led": null
+        }
+    },
+    {
+        "tag": "waterMarrow",
+        "status": {
+            "level": null,
+            "temperature": null,
+            "salinity": null,
+            "ph": null,
+            "oxigen": null,
+            "ro": null
+        }
+    }
+]
