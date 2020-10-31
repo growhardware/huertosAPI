@@ -18,7 +18,7 @@
  * https://sailsjs.com/support
  */
 
-var PRODUCTION_CONFIG = require('./production');
+var PRODUCTION_CONFIG = require("./production");
 //--------------------------------------------------------------------------
 // /\  Start with your production config, even if it's just a guess for now,
 // ||  then configure your staging environment afterwards.
@@ -26,7 +26,6 @@ var PRODUCTION_CONFIG = require('./production');
 //--------------------------------------------------------------------------
 
 module.exports = Object.assign({}, PRODUCTION_CONFIG, {
-
   datastores: Object.assign({}, PRODUCTION_CONFIG.datastores, {
     default: Object.assign({}, PRODUCTION_CONFIG.datastores.default, {
       // url: 'mysql://shared:some_password_everyone_knows@db.example.com:3306/my_staging_db',
@@ -34,13 +33,25 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
       // /\  Hard-code your staging db `url`.
       // ||  (or use system env var: `sails_datastores__default__url`)
       //--------------------------------------------------------------------------
-    })
+    }),
   }),
 
-  sockets: Object.assign({}, PRODUCTION_CONFIG.sockets, {
+  ssl: {
+    ca: require("fs").readFileSync(
+      require("path").resolve(__dirname, "../ssl/request.csr")
+    ),
+    key: require("fs").readFileSync(
+      require("path").resolve(__dirname, "../ssl/private.key")
+    ),
+    cert: require("fs").readFileSync(
+      require("path").resolve(__dirname, "../ssl/certificate.crt")
+    ),
+  },
 
+  sockets: Object.assign({}, PRODUCTION_CONFIG.sockets, {
     onlyAllowOrigins: [
-      'http://localhost:1337',
+      //"http://localhost:1337",
+      "https://boiling-meadow-25657.herokuapp.com",
       // 'https://example-staging.herokuapp.com',
       // 'http://example-staging.herokuapp.com',
       // 'https://staging.example.com',
@@ -62,7 +73,8 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   }),
 
   session: Object.assign({}, PRODUCTION_CONFIG.session, {
-    // url: 'redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions',
+    url:
+      "redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions",
     //--------------------------------------------------------------------------
     // /\  Hard-code your staging Redis server's `url` again here.
     // ||  (or use system env var: `sails_session__url`)
@@ -70,14 +82,14 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   }),
 
   custom: Object.assign({}, PRODUCTION_CONFIG.custom, {
-
-    baseUrl: 'https://staging.example.com',
+    //baseUrl: "https://3.137.147.183:443",
+    baseUrl: "https://3.137.147.183:80",
     //--------------------------------------------------------------------------
     // /\  Hard-code the base URL where your staging environment is hosted.
     // ||  (or use system env var: `sails_custom__baseUrl`)
     //--------------------------------------------------------------------------
 
-    internalEmailAddress: 'support+staging@example.com',
+    internalEmailAddress: "support+staging@example.com",
     //--------------------------------------------------------------------------
     // /\  Hard-code the email address that should receive support/contact form
     // ||  messages in staging (or use `sails_custom__internalEmailAddress`)
@@ -90,7 +102,5 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
     // /\  Hard-code credentials to use in staging for other 3rd party APIs, etc.
     // ||  (or use system environment variables prefixed with "sails_custom__")
     //--------------------------------------------------------------------------
-
-  })
-
+  }),
 });
