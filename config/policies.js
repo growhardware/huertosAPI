@@ -23,7 +23,7 @@ module.exports.policies = {
   'deliver-contact-form-message': true,
 
   // Policies de GH:
-  'device/create': 'attach-creator',
+  'device/create': ['attach-creator', 'mold-created-device'],
   'device/update': 'is-admin-of-this',
   //
 
