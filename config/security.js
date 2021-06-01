@@ -28,7 +28,7 @@ module.exports.security = {
 
   cors: {
     allRoutes: true,
-    allowOrigins: ['https://obscure-citadel-69496.herokuapp.com/'],
+    allowOrigins: '*',
     allowCredentials: true
   },
 
