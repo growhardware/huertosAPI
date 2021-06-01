@@ -28,11 +28,8 @@ module.exports.security = {
 
   cors: {
     allRoutes: true,
-    allowOrigins: [
-      "http://localhost:3000",
-      "http://rocky-peak-50757.herokuapp.com",
-    ],
-    allowCredentials: true,
+    allowOrigins: ['https://obscure-citadel-69496.herokuapp.com/'],
+    allowCredentials: true
   },
 
   /****************************************************************************
@@ -44,5 +41,5 @@ module.exports.security = {
    *                                                                           *
    ****************************************************************************/
 
-  csrf: false,
+  csrf: false
 };
