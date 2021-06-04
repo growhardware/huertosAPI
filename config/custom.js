@@ -22,8 +22,8 @@ module.exports.custom = {
    *                                                                         *
    **************************************************************************/
   //baseUrl: 'http://localhost:1337',
-  //baseUrl: "http://localhost:1337",
-  baseUrl: 'http://ec2-18-188-86-138.us-east-2.compute.amazonaws.com:1337',
+  baseUrl: 'http://localhost:1337',
+  //baseUrl: 'http://ec2-18-188-86-138.us-east-2.compute.amazonaws.com:1337',
 
   /**************************************************************************
    *                                                                         *
