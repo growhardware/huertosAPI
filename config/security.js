@@ -28,7 +28,7 @@ module.exports.security = {
 
   cors: {
     allRoutes: true,
-    allowOrigins: 'http://localhost',
+    allowOrigins: ['http://localhost', 'http://ec2-18-188-86-138.us-east-2.compute.amazonaws.com'],
     allowCredentials: true
   },
 
