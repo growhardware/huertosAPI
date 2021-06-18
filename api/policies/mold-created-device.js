@@ -8,7 +8,7 @@ module.exports = async function (req, res, proceed) {
   const kind = _.findWhere(deviceKinds, {tag: kindTag});
   req.body.status = kind.status;
   req.body.settings = kind.settings;
-
+  console.log(req.body.port);
   return proceed();
 
 };

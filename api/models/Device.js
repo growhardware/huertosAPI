@@ -32,9 +32,19 @@ module.exports = {
       description: 'a json object with status of all the device parameters'
     },
 
+    history: {
+      type: 'json',
+      description: 'a json array containing a history of status object'
+    },
+
     settings: {
       type: 'json',
       description: 'a json object with device settings'
+    },
+
+    port: {
+      type: 'string',
+      description: 'a string with a port path'
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗

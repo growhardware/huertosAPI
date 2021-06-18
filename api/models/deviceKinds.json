@@ -1,16 +1,17 @@
 [
     {
-        "tag": "ioTest",
+        "tag": "concept-medulla",
         "status" : {
             "pushButton" : null,
             "led": null
         },
         "settings": {
-            "led": null
-        }
+            "led": false
+        },
+        "history": []
     },
     {
-        "tag": "waterMarrow",
+        "tag": "water-medulla",
         "status": {
             "level": null,
             "temperature": null,
