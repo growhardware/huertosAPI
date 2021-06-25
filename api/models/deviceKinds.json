@@ -2,7 +2,7 @@
     {
         "tag": "concept-medulla",
         "status" : {
-            "pushButton" : null,
+            "switch" : null,
             "led": null
         },
         "settings": {
