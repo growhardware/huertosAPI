@@ -8,9 +8,7 @@ const kinds = require('./deviceKinds.json');
 const kindTags = _.pluck(kinds, 'tag');
 
 module.exports = {
-
   attributes: {
-
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
@@ -19,7 +17,7 @@ module.exports = {
     kind: {
       type: 'string',
       description: 'GH identifier name for a certain kind of device',
-      isIn: kindTags,
+      isIn: kindTags
     },
 
     alias: {
@@ -51,14 +49,24 @@ module.exports = {
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
 
-
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    admin: {collection: 'user', via: 'managing'},
-    farm: {model: 'farm'},
-    environment: {collection: 'environment', via: 'devices'},
-    batch: {collection: 'batch', via: 'devices'},
+    admin: { collection: 'user', via: 'managing' },
+    farm: { model: 'farm' },
+    environment: { collection: 'environment', via: 'devices' },
+    batch: { collection: 'batch', via: 'devices' }
   },
+
+  // functions
+  afterUpdate: async function (updatedRecord, proceed) {
+    await History.create({
+      updatedAt: updatedRecord.updatedAt,
+      status: updatedRecord.status,
+      settings: updatedRecord.settings,
+      device: updatedRecord.id
+    });
+    return proceed();
+  }
 };
