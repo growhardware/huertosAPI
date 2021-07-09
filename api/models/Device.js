@@ -30,11 +30,6 @@ module.exports = {
       description: 'a json object with status of all the device parameters'
     },
 
-    history: {
-      type: 'json',
-      description: 'a json array containing a history of status object'
-    },
-
     settings: {
       type: 'json',
       description: 'a json object with device settings'
@@ -49,6 +44,10 @@ module.exports = {
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
 
+    history: {
+      collection: 'history', via: 'device'
+   },
+
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
@@ -59,14 +58,50 @@ module.exports = {
     batch: { collection: 'batch', via: 'devices' }
   },
 
-  // functions
-  afterUpdate: async function (updatedRecord, proceed) {
-    await History.create({
-      updatedAt: updatedRecord.updatedAt,
-      status: updatedRecord.status,
-      settings: updatedRecord.settings,
-      device: updatedRecord.id
-    });
+  // lifecycle functions:
+  /*
+  afterCreate: async function (createdRec, proceed) {
+    const record = {
+      status: [{
+        timestamp
+      }]
+    };
+    createdRec['history'] = await History.create(record);
+    return proceed();
+  },
+  */
+  
+  beforeUpdate: async function (valuesToSet, proceed) {
+    const device = await Device.findOne( {id: valuesToSet.id} );
+    console.log(device);
+    var record = {
+      device: valuesToSet.id,
+      status: {}
+    }
+    /*
+    if (valuesToSet.hasOwnProperty('settings')){
+      const props = Object.keys(valuesToSet.settings);
+      props.map( p => {
+        if (valuesToSet.settings[p] != device.settings[p]){
+          record.settings[p] = device.settings[p];
+        }
+      });
+      record.settings['timestamp'] = valuesToSet.updatedAt;
+    }
+    */
+    if (valuesToSet.hasOwnProperty('status')){
+      const props = Object.keys(valuesToSet.status);
+      console.log(props);
+      props.map( p => {
+        if (valuesToSet.status[p] != device.status[p]){
+          record.status[p] = device.status[p];
+        }
+      });
+      if (record.status) {
+        await History.create( record );
+      }
+    }
+    
     return proceed();
   }
 };

@@ -10,19 +10,16 @@ module.exports = {
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-    updatedTime: {
-      type: 'number',
-      description: 'timestamp when the update happens'
-    },
+    updatedAt: false,
 
     status: {
       type: 'json',
-      description: 'the status updated'
+      description: 'object with status events: key/values until createdAt',
     },
 
     settings: {
       type: 'json',
-      description: 'the settings about that time'
+      description: 'object with settings events: key/values until createdAt',
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
@@ -32,9 +29,9 @@ module.exports = {
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
-    // the device who belongs the history
-    device: {
-      model: 'Device'
-    }
+
+    // the device to which the history belongs:
+    device: { model: 'Device' }
+    
   }
 };
