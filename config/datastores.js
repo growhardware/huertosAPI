@@ -45,8 +45,8 @@ module.exports.datastores = {
      *    (See https://sailsjs.com/config/datastores for help.)                 *
      *                                                                          *
      ***************************************************************************/
-    adapter: 'sails-mongo',
-    url: 'mongodb://huertos-api:huertos@127.0.0.1:27017/huertos'
+    // adapter: 'sails-mongo',
+    // url: 'mongodb://huertos-api:huertos@127.0.0.1:27017/huertos'
     //url: 'mongodb://api:api@localhost:27017/test',
     // "mongodb+srv://huertosAPI:VxXiPjH3Qrgxxms@cluster0-shard-00-02-dx2ao.gcp.mongodb.net:27017/huertos",
     //"mongodb://test
