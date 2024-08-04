@@ -45,6 +45,8 @@ module.exports.datastores = {
      *    (See https://sailsjs.com/config/datastores for help.)                 *
      *                                                                          *
      ***************************************************************************/
+    adapter: "sails-mongo",
+    url: "mongodb://localhost:27017/huertos",
     // adapter: 'sails-mongo',
     // url: 'mongodb://huertos-api:huertos@127.0.0.1:27017/huertos'
     //url: 'mongodb://api:api@localhost:27017/test',
@@ -54,5 +56,5 @@ module.exports.datastores = {
     //   //"mongodb+srv://ghapi:zRINaNIvW8tqELtY@cluster0-s7lnh.mongodb.net:27017/test?retryWrites=true&w=majority",
     //   "mongodb://ghapi:zRINaNIvW8tqELtY@cluster0-shard-00-00-s7lnh.mongodb.net:27017,cluster0-shard-00-01-s7lnh.mongodb.net:27017,cluster0-shard-00-02-s7lnh.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
     //    ssl: true,
-  }
+  },
 };
