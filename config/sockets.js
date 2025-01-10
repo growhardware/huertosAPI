@@ -26,7 +26,7 @@ module.exports.sockets = {
    *                                                                          *
    ***************************************************************************/
 
-  transports: ['websocket'],
+  transports: ["websocket"],
 
   /***************************************************************************
    *                                                                          *
@@ -45,7 +45,7 @@ module.exports.sockets = {
     //   // `true` allows the socket to connect.
     //   // (`false` would reject the connection)
     return proceed(undefined, true);
-    console.log('va a conectar');
+    console.log("va a conectar");
   },
 
   /***************************************************************************
@@ -62,10 +62,14 @@ module.exports.sockets = {
     //   // By default: do nothing.
     //   // (but always trigger the callback)
     return done();
-    console.log('desconectó un socket');
+    console.log("desconectó un socket");
     //
-  }
+  },
 
+  // Set up to broadcast to all connected clients
+  roomMessage: function (socket, room, message) {
+    socket.emit("newData", message);
+  },
   /***************************************************************************
    *                                                                          *
    * Whether to expose a 'GET /__getcookie' route that sets an HTTP-only      *
