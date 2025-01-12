@@ -1,16 +1,16 @@
 /**
- * Default model settings
+ * Default model plan
  * (sails.config.models)
  *
- * Your default, project-wide model settings. Can also be overridden on a
- * per-model basis by setting a top-level properties in the model definition.
+ * Your default, project-wide model plan. Can also be overridden on a
+ * per-model basis by plan a top-level properties in the model definition.
  *
- * For details about all available model settings, see:
+ * For details about all available model plan, see:
  * https://sailsjs.com/config/models
  *
- * For more general background on Sails model settings, and how to configure
+ * For more general background on Sails model plan, and how to configure
  * them on a project-wide or per-model basis, see:
- * https://sailsjs.com/docs/concepts/models-and-orm/model-settings
+ * https://sailsjs.com/docs/concepts/models-and-orm/model-plan
  */
 
 module.exports.models = {
@@ -25,11 +25,11 @@ module.exports.models = {
    *                                                                          *
    * > Note that `schema: false` is not supported by every database.          *
    * > For example, if you are using a SQL database, then relevant models     *
-   * > are always effectively `schema: true`.  And if no `schema` setting is  *
+   * > are always effectively `schema: true`.  And if no `schema` plan is  *
    * > provided whatsoever, the behavior is left up to the database adapter.  *
    * >                                                                        *
    * > For more info, see:                                                    *
-   * > https://sailsjs.com/docs/concepts/orm/model-settings#?schema           *
+   * > https://sailsjs.com/docs/concepts/orm/model-plan#?schema           *
    *                                                                          *
    ***************************************************************************/
 
@@ -46,7 +46,7 @@ module.exports.models = {
    * > auto-migrations on your production database.                           *
    * >                                                                        *
    * > For more info, see:                                                    *
-   * > https://sailsjs.com/docs/concepts/orm/model-settings#?migrate          *
+   * > https://sailsjs.com/docs/concepts/orm/model-plan#?migrate          *
    *                                                                          *
    ***************************************************************************/
 
@@ -60,7 +60,7 @@ module.exports.models = {
    * or updated.                                                              *
    *                                                                          *
    * > For more info, see:                                                    *
-   * > https://sailsjs.com/docs/concepts/orm/model-settings#?attributes       *
+   * > https://sailsjs.com/docs/concepts/orm/model-plan#?attributes       *
    *                                                                          *
    ***************************************************************************/
 
@@ -92,7 +92,7 @@ module.exports.models = {
    * > manage these keys like you would any other sensitive credential.          *
    *                                                                             *
    * > For more info, see:                                                       *
-   * > https://sailsjs.com/docs/concepts/orm/model-settings#?dataEncryptionKeys  *
+   * > https://sailsjs.com/docs/concepts/orm/model-plan#?dataEncryptionKeys  *
    *                                                                             *
    ******************************************************************************/
 

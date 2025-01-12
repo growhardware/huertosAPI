@@ -30,9 +30,9 @@ module.exports = {
       description: "a json object with status of all the device parameters",
     },
 
-    settings: {
+    plan: {
       type: "json",
-      description: "a json object with device settings",
+      description: "a json object with device plan",
     },
 
     port: {
@@ -90,14 +90,14 @@ module.exports = {
       status: {},
     };
     /*
-    if (valuesToSet.hasOwnProperty('settings')){
-      const props = Object.keys(valuesToSet.settings);
+    if (valuesToSet.hasOwnProperty('plan')){
+      const props = Object.keys(valuesToSet.plan);
       props.map( p => {
-        if (valuesToSet.settings[p] != device.settings[p]){
-          record.settings[p] = device.settings[p];
+        if (valuesToSet.plan[p] != device.plan[p]){
+          record.plan[p] = device.plan[p];
         }
       });
-      record.settings['timestamp'] = valuesToSet.updatedAt;
+      record.plan['timestamp'] = valuesToSet.updatedAt;
     }
     */
     if (valuesToSet.hasOwnProperty("status")) {
