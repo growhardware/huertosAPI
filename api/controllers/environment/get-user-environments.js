@@ -28,18 +28,36 @@ module.exports = {
 
   fn: async function () {
     // console.log("req", this.req.session.userId);
-    const userId = this.req.session.userId;
-    const user = await User.findOne({ id: userId }).populate("managing");
-    const envIds = user["managing"].map((d) => d.id);
-    let environments = await Environment.find({ id: envIds }).populate(
-      "history"
-    );
+    //     const userId = this.req.session.userId;
+    //     const user = await User.findOne({ id: userId }).populate("managing");
+    //     const envIds = user["managing"].map((d) => d.id);
+    //     let environments = await Environment.find({ id: envIds }).populate(
+    //       "history"
+    //     );
 
-    if (this.req.isSocket) {
-      const ids = environments.map((d) => d.id);
-      Environment.subscribe(this.req, ids);
+    //     if (this.req.isSocket) {
+    //       const ids = environments.map((d) => d.id);
+    //       Environment.subscribe(this.req, ids);
+    //     }
+
+    //     return environments;
+    //   },
+
+    //   async function(req, res) {
+    try {
+      const userId = this.req.param("userId"); // Assume userId is passed in as a URL parameter
+
+      // Query the Post model to find all posts created by the specified user
+      const environments = await Environment.find({
+        user: userId,
+      });
+
+      // Return the posts
+      return environments;
+      //   return res.json(environments);
+    } catch (err) {
+      //   return res.serverError(err);
+      return err;
     }
-
-    return environments;
   },
 };

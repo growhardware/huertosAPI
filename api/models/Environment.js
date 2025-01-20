@@ -6,31 +6,30 @@
  */
 
 module.exports = {
-
   attributes: {
-
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    name: {type:'string', defaultsTo: 'unnamed', maxLength:150},
-    volume: {type: 'number', required: true},
+    name: { type: "string", defaultsTo: "unnamed", maxLength: 150 },
+    volume: { type: "number", required: true },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
 
+    user: {
+      model: "User", // This assumes you have a User model
+      required: true,
+    },
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    farm: {model: 'farm'},
-    batches: {collection: 'batch', via: 'environment'},
-    specimens: {collection: 'specimen', via: 'environment'},
-    devices: {collection: 'device', via: 'environment'},
-
+    farm: { model: "farm" },
+    batches: { collection: "batch", via: "environment" },
+    specimens: { collection: "specimen", via: "environment" },
+    devices: { collection: "device", via: "environment" },
   },
-
 };
-
