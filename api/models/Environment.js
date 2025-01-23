@@ -17,7 +17,7 @@ module.exports = {
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
+    // THIS GONNA BE REORGANIZED USING ORGANIZATION CONCEPT FOR ENTERPRISE EDITION
     user: {
       model: "User", // This assumes you have a User model
       required: true,
