@@ -20,5 +20,16 @@
       "oxigen": null,
       "ro": null
     }
+  },
+  {
+    "tag": "light-medulla",
+    "status": {
+      "switch": null,
+      "led": null
+    },
+    "plan": {
+      "led": false
+    },
+    "history": []
   }
 ]
