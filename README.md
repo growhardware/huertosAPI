@@ -105,3 +105,5 @@ React and Tailwind are two popular technologies that have taken the web developm
 <!-- final tag for the huertosUI mvp kick off version
 migrate the feature from huertos-ui (registration, login, logout, devices)
 add calendar and charts -->
+
+# docker restart a09a85f23101f2207b1089521e68d6e95c595eb760da2ab3ae8108ceb4c3dfdf

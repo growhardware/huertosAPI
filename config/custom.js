@@ -35,7 +35,7 @@ module.exports.custom = {
    *                                                                         *
    **************************************************************************/
   platformCopyrightYear: "2021",
-  platformName: "Huertos",
+  platformName: "GrowHardare Backend",
   platformCompanyName: "Grow Hardware",
   platformCompanyAboutHref: "https://sailsjs.com/about",
   privacyPolicyUpdatedAt: "DATE_PRIVACY_POLICY_LAST_UPDATED",
