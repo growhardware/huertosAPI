@@ -6,36 +6,38 @@
  */
 
 module.exports = {
-
   attributes: {
-
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
+    name: { type: "string", defaultsTo: "Unnamed specimen" },
 
-    provider: {  // A name for the strain provider, by now
-      type: 'string',
+    provider: {
+      // A name for the strain provider, by now
+      type: "string",
       maxLength: 150,
-      defaultsTo: 'unknown'
+      defaultsTo: "unknown",
     },
 
     provenance: {
-      type:'string',
-      isIn: ['bank','sharing','wild','unknown'],
-      defaultsTo: 'unknown'
+      type: "string",
+      isIn: ["bank", "sharing", "wild", "unknown"],
+      defaultsTo: "unknown",
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
+    // THIS GONNA BE REORGANIZED USING ORGANIZATION CONCEPT FOR ENTERPRISE EDITION
+    user: {
+      model: "User", // This assumes you have a User model
+      required: true,
+    },
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    specimens: {collection: 'specimen', via: 'strain'},
-
+    specimens: { collection: "specimen", via: "strain" },
   },
 };
-

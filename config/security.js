@@ -2,7 +2,7 @@
  * Security Settings
  * (sails.config.security)
  *
- * These settings affect aspects of your app's security, such
+ * These plan affect aspects of your app's security, such
  * as how it deals with cross-origin requests (CORS) and which
  * routes require a CSRF token to be included with the request.
  *
@@ -28,8 +28,8 @@ module.exports.security = {
 
   cors: {
     allRoutes: true,
-    allowOrigins: ['http://localhost'],
-    allowCredentials: true
+    allowOrigins: ["http://localhost"],
+    allowCredentials: true,
   },
 
   /****************************************************************************
@@ -41,5 +41,5 @@ module.exports.security = {
    *                                                                           *
    ****************************************************************************/
 
-  csrf: false
+  csrf: false,
 };

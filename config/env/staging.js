@@ -1,10 +1,10 @@
 /**
- * Staging environment settings
+ * Staging environment plan
  * (sails.config.*)
  *
- * This is mostly a carbon copy of the production environment settings
+ * This is mostly a carbon copy of the production environment plan
  * in config/env/production.js, but with the overrides listed below.
- * For more detailed information and links about what these settings do
+ * For more detailed information and links about what these plan do
  * see the production config file.
  *
  * > This file takes effect when `sails.config.environment` is "staging".
@@ -51,9 +51,9 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
   sockets: Object.assign({}, PRODUCTION_CONFIG.sockets, {
     onlyAllowOrigins: [
       //"http://localhost:1337",
-	"http//localhost:3000",
-//      "https://boiling-meadow-25657.herokuapp.com",
-      	"https://rocky-peak-50757.herokuapp.com",
+      "http//localhost:3000",
+      //      "https://boiling-meadow-25657.herokuapp.com",
+      "https://rocky-peak-50757.herokuapp.com",
       // 'https://example-staging.herokuapp.com',
       // 'http://example-staging.herokuapp.com',
       // 'https://staging.example.com',
@@ -76,7 +76,7 @@ module.exports = Object.assign({}, PRODUCTION_CONFIG, {
 
   session: Object.assign({}, PRODUCTION_CONFIG.session, {
     //url:
-     // "redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions",
+    // "redis://shared:some_password_everyone_knows@bigsquid.redistogo.com:9562/staging-sessions",
     //--------------------------------------------------------------------------
     // /\  Hard-code your staging Redis server's `url` again here.
     // ||  (or use system env var: `sails_session__url`)

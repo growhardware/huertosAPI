@@ -6,31 +6,29 @@
  */
 
 module.exports = {
-
   attributes: {
-
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
-
-
+    name: { type: "string", defaultsTo: "Unnamed farm" },
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
+    // THIS GONNA BE REORGANIZED USING ORGANIZATION CONCEPT FOR ENTERPRISE EDITION
+    user: {
+      model: "User", // This assumes you have a User model
+      required: true,
+    },
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    farmers: {collection: 'user', via: 'farming'},
-    inspectors: {collection: 'user', via: 'inspecting'},
-    environments: {collection: 'environment', via: 'farm'},
-    batches: {collection: 'batch', via: 'farm'},
-    specimens: {collection: 'specimen', via: 'farm'},
-    devices: {collection: 'device', via: 'farm'},
-
+    farmers: { collection: "user", via: "farming" },
+    inspectors: { collection: "user", via: "inspecting" },
+    environments: { collection: "environment", via: "farm" },
+    batches: { collection: "batch", via: "farm" },
+    specimens: { collection: "specimen", via: "farm" },
+    devices: { collection: "device", via: "farm" },
   },
-
 };
-

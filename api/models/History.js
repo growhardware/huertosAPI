@@ -13,13 +13,13 @@ module.exports = {
     updatedAt: false,
 
     status: {
-      type: 'json',
-      description: 'object with status events: key/values until createdAt',
+      type: "json",
+      description: "object with status events: key/values until createdAt",
     },
 
-    settings: {
-      type: 'json',
-      description: 'object with settings events: key/values until createdAt',
+    plan: {
+      type: "json",
+      description: "object with plan events: key/values until createdAt",
     },
 
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
@@ -31,7 +31,6 @@ module.exports = {
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
     // the device to which the history belongs:
-    device: { model: 'Device' }
-    
-  }
+    device: { model: "Device" },
+  },
 };
