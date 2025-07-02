@@ -1,24 +1,35 @@
 [
-    {
-        "tag": "concept-medulla",
-        "status" : {
-            "switch" : null,
-            "led": null
-        },
-        "settings": {
-            "led": false
-        },
-        "history": []
+  {
+    "tag": "concept-medulla",
+    "status": {
+      "switch": null,
+      "led": null
     },
-    {
-        "tag": "water-medulla",
-        "status": {
-            "level": null,
-            "temperature": null,
-            "salinity": null,
-            "ph": null,
-            "oxigen": null,
-            "ro": null
-        }
+    "plan": {
+      "led": false
+    },
+    "history": []
+  },
+  {
+    "tag": "water-medulla",
+    "status": {
+      "level": null,
+      "temperature": null,
+      "salinity": null,
+      "ph": null,
+      "oxigen": null,
+      "ro": null
     }
+  },
+  {
+    "tag": "light-medulla",
+    "status": {
+      "switch": null,
+      "led": null
+    },
+    "plan": {
+      "led": false
+    },
+    "history": []
+  }
 ]

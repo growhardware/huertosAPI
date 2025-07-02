@@ -2,8 +2,8 @@
  * WebSocket Server Settings
  * (sails.config.sockets)
  *
- * Use the settings below to configure realtime functionality in your app.
- * (for additional recommended settings, see `config/env/production.js`)
+ * Use the plan below to configure realtime functionality in your app.
+ * (for additional recommended plan, see `config/env/production.js`)
  *
  * For all available options, see:
  * https://sailsjs.com/config/sockets
@@ -26,7 +26,7 @@ module.exports.sockets = {
    *                                                                          *
    ***************************************************************************/
 
-  transports: ['websocket'],
+  transports: ["websocket"],
 
   /***************************************************************************
    *                                                                          *
@@ -45,7 +45,7 @@ module.exports.sockets = {
     //   // `true` allows the socket to connect.
     //   // (`false` would reject the connection)
     return proceed(undefined, true);
-    console.log('va a conectar');
+    console.log("va a conectar");
   },
 
   /***************************************************************************
@@ -62,10 +62,14 @@ module.exports.sockets = {
     //   // By default: do nothing.
     //   // (but always trigger the callback)
     return done();
-    console.log('desconectó un socket');
+    console.log("desconectó un socket");
     //
-  }
+  },
 
+  // Set up to broadcast to all connected clients
+  roomMessage: function (socket, room, message) {
+    socket.emit("newData", message);
+  },
   /***************************************************************************
    *                                                                          *
    * Whether to expose a 'GET /__getcookie' route that sets an HTTP-only      *
@@ -75,9 +79,10 @@ module.exports.sockets = {
 
   // grant3rdPartyCookie: true,
 
-  // onlyAllowOrigins: [
-  //   'http://localhost:1337',
-  //   'http://localhost:3000',
-  //   'http://ec2-18-188-86-138.us-east-2.compute.amazonaws.com:3000/'
-  // ]
+  onlyAllowOrigins: [
+        '*'
+    // 'http://localhost:1337',
+    // 'http://localhost:3000',
+    // 'http://ec2-18-188-86-138.us-east-2.compute.amazonaws.com:3000/'
+  ]
 };

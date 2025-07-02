@@ -15,8 +15,8 @@
 # This keeps tmp files and sensitive credentials
 # from being uploaded to  your repository.  And
 # it allows you to configure your app for your
-# machine without accidentally committing settings
-# which will smash the local settings of other
+# machine without accidentally committing plan
+# which will smash the local plan of other
 # developers on your team.
 #
 # Some reasonable defaults are included below,
@@ -132,3 +132,5 @@ lib-cov
 *.out
 *.pid
 
+# 
+.env

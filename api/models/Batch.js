@@ -6,34 +6,36 @@
  */
 
 module.exports = {
-
   attributes: {
-
     //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    name: {type: 'string', defaultsTo: 'Unnamed batch'},
+    // id: {type: "string", required: true},
 
-    nutritionHistory: {type: 'json'},
-    nutritionPlain: {type: 'json'},
+    name: { type: "string", defaultsTo: "Unnamed batch" },
 
-    irrigationHistory: {type: 'json'},
-    irrigationPlain: {type: 'json'},
+    nutritionHistory: { type: "json" },
+    nutritionPlain: { type: "json" },
+
+    irrigationHistory: { type: "json" },
+    irrigationPlain: { type: "json" },
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
+    // THIS GONNA BE REORGANIZED USING ORGANIZATION CONCEPT FOR ENTERPRISE EDITION
+    user: {
+      model: "User", // This assumes you have a User model
+      required: true,
+    },
 
     //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
     //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
     //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
 
-    farm: {model: 'farm'},
-    environment: {model: 'environment'},
-    specimens: {collection: 'specimen', via: 'batches'},
-    devices: {collection: 'device', via: 'batch'},
-
+    farm: { model: "farm" },
+    environment: { model: "environment" },
+    specimens: { collection: "specimen", via: "batches" },
+    devices: { collection: "device", via: "batch" },
   },
 };
-

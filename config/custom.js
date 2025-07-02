@@ -2,7 +2,7 @@
  * Custom configuration
  * (sails.config.custom)
  *
- * One-off settings specific to your application.
+ * One-off plan specific to your application.
  *
  * For more information on custom configuration, visit:
  * https://sailsjs.com/config/custom
@@ -23,7 +23,8 @@ module.exports.custom = {
    **************************************************************************/
   //baseUrl: 'http://localhost:1337',
   //baseUrl: 'http://localhost:1337',
-  baseUrl: 'http://ec2-18-188-86-138.us-east-2.compute.amazonaws.com:1337',
+  // baseUrl: "http://ec2-18-188-86-138.us-east-2.compute.amazonaws.com:1337",
+  baseUrl: 'https://backend-production-98b7.up.railway.app/',
 
   /**************************************************************************
    *                                                                         *
@@ -34,12 +35,12 @@ module.exports.custom = {
    * > app when it's first generated.                                        *
    *                                                                         *
    **************************************************************************/
-  platformCopyrightYear: '2021',
-  platformName: 'Huertos',
-  platformCompanyName: 'Grow Hardware',
-  platformCompanyAboutHref: 'https://sailsjs.com/about',
-  privacyPolicyUpdatedAt: 'DATE_PRIVACY_POLICY_LAST_UPDATED',
-  termsOfServiceUpdatedAt: 'DATE_TERMS_OF_SERVICE_LAST_UPDATED',
+  platformCopyrightYear: "2021",
+  platformName: "GrowHardare Backend",
+  platformCompanyName: "Grow Hardware",
+  platformCompanyAboutHref: "https://sailsjs.com/about",
+  privacyPolicyUpdatedAt: "DATE_PRIVACY_POLICY_LAST_UPDATED",
+  termsOfServiceUpdatedAt: "DATE_TERMS_OF_SERVICE_LAST_UPDATED",
 
   /**************************************************************************
    *                                                                         *
@@ -62,31 +63,32 @@ module.exports.custom = {
    * Automated email configuration                                           *
    *                                                                         *
    * Sandbox Sendgrid credentials for use during development, as well as any *
-   * other default settings related to "how" and "where" automated emails    *
+   * other default plan related to "how" and "where" automated emails    *
    * are sent.                                                               *
    *                                                                         *
-   * (https://app.sendgrid.com/settings/api_keys)                            *
+   * (https://app.sendgrid.com/plan/api_keys)                            *
    *                                                                         *
    **************************************************************************/
-  sendgridSecret: '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',
+  sendgridSecret:
+    "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",
   //--------------------------------------------------------------------------
   // /\  Configure this to enable support for automated emails.
   // ||  (Important for password recovery, verification, contact form, etc.)
   //--------------------------------------------------------------------------
 
   // The sender that all outgoing emails will appear to come from.
-  fromEmailAddress: 'no_reply@growhardware.com',
-  fromName: 'The Huertos Team',
+  fromEmailAddress: "no_reply@growhardware.com",
+  fromName: "The Huertos Team",
 
   // Email address for receiving support messages & other correspondences.
   // > If you're using the default privacy policy, this will be referenced
   // > as the contact email of your "data protection officer" for the purpose
   // > of compliance with regulations such as GDPR.
-  internalEmailAddress: 'growhardware@gmail.com',
+  internalEmailAddress: "growhardware@gmail.com",
 
   // Whether to require proof of email address ownership any time a new user
   // signs up, or when an existing user attempts to change their email address.
-  verifyEmailAddresses: false
+  verifyEmailAddresses: false,
 
   /**************************************************************************
    *                                                                         *
